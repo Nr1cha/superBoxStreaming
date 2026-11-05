@@ -1,0 +1,17 @@
+body{
+    background-color: darkgreen;
+}
+
+.video-wrapper{
+    position: relative;
+    width: 100%;
+    overflow:hidden;
+}
+
+.video-wrapper video {
+    display: block;
+    inset: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
