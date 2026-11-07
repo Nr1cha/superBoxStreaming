@@ -147,3 +147,8 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+
+
+# Powershell command
+ffmpeg -f dshow -rtbufsize 256M -thread_queue_size 512 -vcodec mjpeg -framerate 30 -video_size 1920x1080 -i 'video=USB3.0 Video:audio=Digital Audio Interface (USB3.0 Audio)' -c:v libx264 -preset veryfast -pix_fmt yuv420p -fps_mode cfr -r 30 -g 30 -keyint_min 30 -sc_threshold 0 -b:v 4M -maxrate 4M -bufsize 8M -c:a aac -b:a 128k -ar 48000 -af aresample=async=1 -f rtsp -rtsp_transport tcp rtsp://localhost:8554/hdmi
